@@ -41,11 +41,26 @@ class Exercise2 extends Component {
             ],
         };
     }
-
+    displayConvo = (displayConversation) => {};
     render() {
         return (
-            <div>{this.displayConversation ? <List contacts = {this.state.conversations.map(c=>{c.with})}/>: 
-            <Conversation />}</div>
+            <div>
+                {this.state.displayConversation ? (
+                    <Conversation
+                        sender={this.state.displayConversation}
+                        convo={this.state.conversations.map((c) => {
+                            c.convo;
+                        })}
+                    />
+                ) : (
+                    <List
+                        displayConvo={this.displayConvo}
+                        contacts={this.state.conversations.map((c) => {
+                            c.with;
+                        })}
+                    />
+                )}
+            </div>
         );
     }
 }
