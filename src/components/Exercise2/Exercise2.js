@@ -44,7 +44,8 @@ class Exercise2 extends Component {
 
     render() {
         return (
-            <div>{this.displayConversation ? <List /> : <Conversation />}</div>
+            <div>{this.displayConversation ? <List contacts = {this.state.conversations.map(c=>{c.with})}/>: 
+            <Conversation />}</div>
         );
     }
 }
