@@ -41,7 +41,9 @@ class Exercise2 extends Component {
             ],
         };
     }
-    displayConvo = (displayConversation) => {};
+    displayConvo = (displayConversation) => {
+      this.setState({displayConversation:displayConversation})
+    };
     render() {
         return (
             <div>
